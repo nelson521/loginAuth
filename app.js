@@ -9,6 +9,9 @@ function submitBtn(e) {
     const div = document.createElement('div');
     div.className = 'alert alert-info';
     div.appendChild(document.createTextNode('You need words!!'));
+    setTimeout(() => {
+      div.remove();
+    }, 3000);
     const container = document.querySelector('.container');
     container.insertBefore(div, container.childNodes[0]);
     console.log(div);
